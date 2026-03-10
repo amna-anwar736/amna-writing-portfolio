@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WordPress vs Custom Website: Which One Does Your Business Actually Need? — Amna Anwar</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Outfit:wght@300;400;500;600&family=DM+Mono:wght@400&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: #f8f6f2; color: #0a0a0a; font-family: 'Outfit', sans-serif; font-weight: 300; }
+
+  nav { padding: 20px 48px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #d4d2ce; background: #f8f6f2; }
+  .nav-logo { font-family: 'Cormorant Garamond', serif; font-size: 18px; font-weight: 600; text-decoration: none; color: #0a0a0a; }
+  .nav-back { font-size: 12px; color: #8a8a8a; text-decoration: none; letter-spacing: 1px; }
+
+  .hero { max-width: 740px; margin: 0 auto; padding: 80px 24px 48px; border-bottom: 1px solid #d4d2ce; }
+  .category { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 3px; text-transform: uppercase; color: #8a8a8a; margin-bottom: 20px; }
+  h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(28px, 5vw, 48px); font-weight: 600; line-height: 1.15; margin-bottom: 20px; }
+  h1 em { font-style: italic; }
+  .subtitle { font-size: 16px; color: #555; line-height: 1.7; margin-bottom: 28px; }
+  .meta { display: flex; gap: 24px; font-size: 12px; color: #8a8a8a; font-family: 'DM Mono', monospace; flex-wrap: wrap; }
+
+  .content { max-width: 740px; margin: 0 auto; padding: 56px 24px 80px; }
+  .content p { font-size: 15.5px; line-height: 1.9; color: #333; margin-bottom: 24px; }
+  .content p strong { color: #0a0a0a; font-weight: 600; }
+  h2 { font-family: 'Cormorant Garamond', serif; font-size: 28px; font-weight: 600; margin: 48px 0 16px; line-height: 1.2; }
+  h2 em { font-style: italic; }
+  h3 { font-size: 17px; font-weight: 600; margin: 28px 0 10px; }
+
+  /* Comparison table */
+  .compare-table { width: 100%; border-collapse: collapse; margin: 32px 0; font-size: 14px; }
+  .compare-table th { background: #0a0a0a; color: #f8f6f2; padding: 14px 20px; text-align: left; font-weight: 500; font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 1px; text-transform: uppercase; }
+  .compare-table td { padding: 14px 20px; border-bottom: 1px solid #efefec; color: #333; }
+  .compare-table tr:nth-child(even) td { background: #faf8f4; }
+  .compare-table .yes { color: #2d6a4f; font-weight: 500; }
+  .compare-table .no { color: #9b2335; font-weight: 500; }
+  .compare-table .mid { color: #8a6000; font-weight: 500; }
+
+  .verdict-box { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin: 32px 0; }
+  .verdict-card { padding: 28px; border: 1px solid #d4d2ce; }
+  .verdict-card h4 { font-size: 15px; font-weight: 600; margin-bottom: 12px; }
+  .verdict-card ul { padding-left: 16px; }
+  .verdict-card ul li { font-size: 13.5px; color: #444; line-height: 1.8; margin-bottom: 6px; }
+  .verdict-card.wp { background: #f0f7f4; border-color: #2d6a4f22; }
+  .verdict-card.custom { background: #f7f0f0; border-color: #9b233522; }
+
+  .highlight-box { background: #0a0a0a; color: #f8f6f2; padding: 32px; margin: 32px 0; }
+  .highlight-box h3 { color: #f8f6f2; margin-top: 0; margin-bottom: 12px; }
+  .highlight-box p { color: #ccc; margin-bottom: 0; font-size: 15px; }
+
+  .tip-box { background: #efefec; border-left: 3px solid #0a0a0a; padding: 20px 24px; margin: 24px 0; }
+  .tip-label { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 2px; text-transform: uppercase; color: #8a8a8a; margin-bottom: 8px; }
+  .tip-box p { font-size: 14px; color: #333; margin-bottom: 0; }
+
+  .conclusion { background: #efefec; padding: 40px; margin-top: 56px; text-align: center; }
+  .conclusion h3 { font-family: 'Cormorant Garamond', serif; font-size: 26px; font-weight: 600; margin-bottom: 12px; }
+  .conclusion p { font-size: 14px; color: #555; margin-bottom: 20px; }
+  .conclusion a { background: #0a0a0a; color: #f8f6f2; padding: 12px 28px; text-decoration: none; font-size: 12px; font-weight: 500; letter-spacing: 2px; text-transform: uppercase; }
+
+  .author-box { display: flex; gap: 20px; align-items: center; padding: 32px 0; border-top: 1px solid #d4d2ce; margin-top: 48px; }
+  .author-avatar { width: 56px; height: 56px; background: #0a0a0a; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #f8f6f2; font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 600; flex-shrink: 0; }
+  .author-name { font-weight: 600; font-size: 15px; margin-bottom: 4px; }
+  .author-bio { font-size: 13px; color: #555; }
+
+  footer { text-align: center; padding: 28px; border-top: 1px solid #d4d2ce; font-family: 'DM Mono', monospace; font-size: 10px; color: #8a8a8a; letter-spacing: 1.5px; }
+
+  @media(max-width:600px){ nav{padding:16px 20px;} .hero{padding:60px 20px 40px;} .content{padding:40px 20px 60px;} .verdict-box{grid-template-columns:1fr;} }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">Amna Anwar</a>
+  <a href="index.html#work" class="nav-back">← Back to Portfolio</a>
+</nav>
+
+<div class="hero">
+  <div class="category">Writing Sample 03 · Technical Blog Post</div>
+  <h1>WordPress vs Custom Website: Which One Does Your Business <em>Actually</em> Need?</h1>
+  <p class="subtitle">It's one of the most common questions I get from clients. The honest answer depends on 3 things — and most people get at least one of them wrong.</p>
+  <div class="meta">
+    <span>✍️ Amna Anwar</span>
+    <span>📅 2025</span>
+    <span>⏱️ 6 min read</span>
+    <span>🏷️ WordPress · Web Development · Technical</span>
+  </div>
+</div>
+
+<div class="content">
+
+  <p>Every week, someone asks me some version of this question: <strong>"Should I use WordPress or get a custom website built?"</strong></p>
+  <p>It sounds simple. It isn't. The right answer depends on your budget, your goals, your technical comfort level, and how much control you want over your site in the long run. I've built both types for clients — and I've seen both choices go wrong when people didn't think it through properly.</p>
+  <p>Let me break it down clearly.</p>
+
+  <h2>First — What's the <em>Actual Difference?</em></h2>
+  <p><strong>WordPress</strong> is a Content Management System (CMS) — a platform that gives you a ready-made framework to build a website on. It powers over 43% of all websites on the internet. You're not starting from scratch — you're customizing an existing, proven system using themes and plugins.</p>
+  <p><strong>A custom website</strong> means a developer writes the code from scratch — HTML, CSS, JavaScript, and usually a backend language like PHP or Python. Nothing is pre-built. Every feature is created specifically for you.</p>
+
+  <h2>Side-by-Side <em>Comparison</em></h2>
+  <table class="compare-table">
+    <tr><th>Factor</th><th>WordPress</th><th>Custom Website</th></tr>
+    <tr><td>Cost</td><td class="yes">Low to medium</td><td class="no">High</td></tr>
+    <tr><td>Build time</td><td class="yes">1–4 weeks</td><td class="no">2–6 months</td></tr>
+    <tr><td>Maintenance</td><td class="mid">Moderate (plugins, updates)</td><td class="mid">Requires developer</td></tr>
+    <tr><td>Flexibility</td><td class="mid">High (with plugins)</td><td class="yes">Unlimited</td></tr>
+    <tr><td>Can manage yourself?</td><td class="yes">Yes — no coding needed</td><td class="no">Usually not</td></tr>
+    <tr><td>SEO capability</td><td class="yes">Excellent (Yoast, RankMath)</td><td class="mid">Depends on developer</td></tr>
+    <tr><td>Security</td><td class="mid">Good (needs maintenance)</td><td class="yes">Fully controlled</td></tr>
+    <tr><td>Scalability</td><td class="mid">Good for most businesses</td><td class="yes">Unlimited</td></tr>
+  </table>
+
+  <h2>When Should You <em>Choose WordPress?</em></h2>
+  <div class="verdict-box">
+    <div class="verdict-card wp">
+      <h4>✅ Choose WordPress if:</h4>
+      <ul>
+        <li>You're a small to medium business</li>
+        <li>You have a limited budget</li>
+        <li>You want to update content yourself</li>
+        <li>You need it live quickly</li>
+        <li>You want a blog or content-heavy site</li>
+        <li>You need an online store (WooCommerce)</li>
+        <li>SEO is a priority</li>
+      </ul>
+    </div>
+    <div class="verdict-card custom">
+      <h4>⚡ Choose Custom if:</h4>
+      <ul>
+        <li>You need very specific custom functionality</li>
+        <li>You're building a web application (not a website)</li>
+        <li>Performance is absolutely critical</li>
+        <li>You have a large budget and time</li>
+        <li>Your needs are too unique for any plugin</li>
+        <li>You have a dedicated tech team</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2>The Myth That <em>Custom = Better</em></h2>
+  <p>A lot of clients come to me thinking that a custom-coded website is automatically more professional or higher quality than WordPress. This is simply not true.</p>
+  <p>Some of the world's biggest brands — including The New York Times, Sony Music, and even the official White House website — have used WordPress at some point. The quality of a WordPress site depends entirely on how well it's built, not on the platform itself.</p>
+
+  <div class="highlight-box">
+    <h3>The real question isn't "WordPress or custom?"</h3>
+    <p>It's: "What does my business actually need to grow online — and what's the most efficient way to build it?" For 90% of businesses, WordPress is the answer. For the other 10%, custom makes sense — but only if the budget and team support it.</p>
+  </div>
+
+  <h2>What I <em>Recommend</em> for Most Clients</h2>
+  <p>For most businesses — especially startups, small businesses, educators, and local service providers — I recommend WordPress with Elementor as the page builder. Here's why:</p>
+
+  <div class="tip-box">
+    <div class="tip-label">My Standard Recommendation</div>
+    <p><strong>WordPress + Elementor + a well-chosen theme</strong> gives you 95% of what a custom site would offer, at 20% of the cost, in a fraction of the time — with the ability to manage and update it yourself without needing a developer on call.</p>
+  </div>
+
+  <p>The remaining 5% — highly specialized features — can almost always be solved with the right plugin or a small custom code addition. In my experience, clients who start with WordPress and grow into needing custom features are much better positioned than those who blow their entire budget on a custom build before they know what they need.</p>
+
+  <h2>Bottom Line</h2>
+  <p>If you're a business owner reading this, here's my honest advice: <strong>Start with WordPress. Build it right. Learn what your users actually need. Then, and only then, consider whether custom development makes sense.</strong></p>
+  <p>Most businesses never need to make that move — because a well-built WordPress site, properly optimized, can scale further than people expect.</p>
+
+  <div class="conclusion">
+    <h3>Not Sure Which is Right for You?</h3>
+    <p>I offer free consultations to help businesses figure out exactly what they need — no sales pitch, just honest advice.</p>
+    <a href="index.html#contact">Let's Talk →</a>
+  </div>
+
+  <div class="author-box">
+    <div class="author-avatar">A</div>
+    <div>
+      <div class="author-name">Amna Anwar</div>
+      <div class="author-bio">Digital Marketing Specialist · WordPress & Moodle LMS Developer · SEO Strategist based in Multan, Pakistan.</div>
+    </div>
+  </div>
+
+</div>
+
+<footer>Writing Sample 03 · Technical Blog Post · amnaanwar.github.io</footer>
+</body>
+</html>

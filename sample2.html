@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Social Media Copywriting Samples — Amna Anwar</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Outfit:wght@300;400;500;600&family=DM+Mono:wght@400&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: #f8f6f2; color: #0a0a0a; font-family: 'Outfit', sans-serif; font-weight: 300; }
+
+  nav {
+    padding: 20px 48px;
+    display: flex; justify-content: space-between; align-items: center;
+    border-bottom: 1px solid #d4d2ce; background: #f8f6f2;
+  }
+  .nav-logo { font-family: 'Cormorant Garamond', serif; font-size: 18px; font-weight: 600; text-decoration: none; color: #0a0a0a; }
+  .nav-back { font-size: 12px; color: #8a8a8a; text-decoration: none; letter-spacing: 1px; }
+  .nav-back:hover { color: #0a0a0a; }
+
+  .hero {
+    max-width: 860px; margin: 0 auto;
+    padding: 80px 24px 48px;
+    border-bottom: 1px solid #d4d2ce;
+  }
+  .category { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 3px; text-transform: uppercase; color: #8a8a8a; margin-bottom: 20px; }
+  h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(32px, 5vw, 52px); font-weight: 600; line-height: 1.15; margin-bottom: 16px; }
+  h1 em { font-style: italic; }
+  .subtitle { font-size: 15px; color: #555; line-height: 1.7; margin-bottom: 28px; }
+  .meta { display: flex; gap: 24px; font-size: 12px; color: #8a8a8a; font-family: 'DM Mono', monospace; }
+
+  .content { max-width: 860px; margin: 0 auto; padding: 56px 24px 80px; }
+
+  /* Platform sections */
+  .platform-section { margin-bottom: 64px; }
+  .platform-label {
+    display: flex; align-items: center; gap: 12px;
+    margin-bottom: 28px; padding-bottom: 16px;
+    border-bottom: 1px solid #d4d2ce;
+  }
+  .platform-icon { font-size: 20px; }
+  .platform-name { font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: #0a0a0a; }
+  .platform-desc { font-size: 12px; color: #8a8a8a; margin-left: auto; }
+
+  /* Post cards */
+  .posts-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+  .post-card {
+    background: white;
+    border: 1px solid #d4d2ce;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  .post-card-header {
+    padding: 16px 20px;
+    border-bottom: 1px solid #efefec;
+    display: flex; align-items: center; gap: 10px;
+  }
+  .post-avatar { width: 36px; height: 36px; background: #0a0a0a; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-family: 'Cormorant Garamond', serif; font-size: 16px; font-weight: 600; flex-shrink: 0; }
+  .post-name { font-size: 13px; font-weight: 600; }
+  .post-handle { font-size: 11px; color: #8a8a8a; }
+  .post-body { padding: 20px; }
+  .post-text { font-size: 14px; line-height: 1.75; color: #222; white-space: pre-line; }
+  .post-text .hashtag { color: #0a66c2; }
+  .post-footer {
+    padding: 12px 20px;
+    border-top: 1px solid #efefec;
+    display: flex; gap: 16px;
+    font-size: 11px; color: #8a8a8a;
+    font-family: 'DM Mono', monospace;
+  }
+
+  /* Instagram post */
+  .insta-card {
+    background: white;
+    border: 1px solid #d4d2ce;
+    border-radius: 12px;
+    overflow: hidden;
+    max-width: 400px;
+  }
+  .insta-header { padding: 14px 16px; display: flex; align-items: center; gap: 10px; border-bottom: 1px solid #efefec; }
+  .insta-avatar { width: 32px; height: 32px; background: linear-gradient(135deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 13px; font-weight: 700; }
+  .insta-username { font-size: 13px; font-weight: 600; }
+  .insta-image { background: #0a0a0a; height: 200px; display: flex; align-items: center; justify-content: center; }
+  .insta-image-text { color: white; font-family: 'Cormorant Garamond', serif; font-size: 22px; font-style: italic; text-align: center; padding: 20px; line-height: 1.4; }
+  .insta-caption { padding: 16px; font-size: 13px; line-height: 1.7; color: #222; }
+  .insta-caption .username { font-weight: 600; }
+  .insta-hashtags { padding: 0 16px 16px; font-size: 12px; color: #0095f6; line-height: 1.7; }
+
+  .copy-note {
+    background: #efefec;
+    border-left: 3px solid #0a0a0a;
+    padding: 16px 20px; margin: 12px 0;
+    font-size: 13px; color: #555;
+    font-style: italic;
+  }
+
+  .author-box { display: flex; gap: 20px; align-items: center; padding: 32px 0; border-top: 1px solid #d4d2ce; margin-top: 48px; }
+  .author-avatar { width: 56px; height: 56px; background: #0a0a0a; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #f8f6f2; font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 600; flex-shrink: 0; }
+  .author-name { font-weight: 600; font-size: 15px; margin-bottom: 4px; }
+  .author-bio { font-size: 13px; color: #555; }
+
+  footer { text-align: center; padding: 28px; border-top: 1px solid #d4d2ce; font-family: 'DM Mono', monospace; font-size: 10px; color: #8a8a8a; letter-spacing: 1.5px; }
+
+  @media(max-width:600px){ nav{padding:16px 20px;} .hero{padding:60px 20px 40px;} .content{padding:40px 20px 60px;} }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">Amna Anwar</a>
+  <a href="index.html#work" class="nav-back">← Back to Portfolio</a>
+</nav>
+
+<div class="hero">
+  <div class="category">Writing Sample 02 · Social Media Copywriting</div>
+  <h1>Social Media Copy That <em>Converts</em></h1>
+  <p class="subtitle">A collection of social media copy samples across LinkedIn, Instagram, and Twitter/X — written to engage, inform, and drive action.</p>
+  <div class="meta">
+    <span>✍️ Amna Anwar</span>
+    <span>🏷️ Copywriting · Social Media</span>
+    <span>📱 LinkedIn · Instagram · Twitter/X</span>
+  </div>
+</div>
+
+<div class="content">
+
+  <!-- LINKEDIN -->
+  <div class="platform-section">
+    <div class="platform-label">
+      <span class="platform-icon">💼</span>
+      <span class="platform-name">LinkedIn</span>
+      <span class="platform-desc">Professional · Thought Leadership · Engagement</span>
+    </div>
+    <div class="posts-grid">
+
+      <div class="post-card">
+        <div class="post-card-header">
+          <div class="post-avatar">A</div>
+          <div><div class="post-name">Amna Anwar</div><div class="post-handle">Digital Marketing Specialist</div></div>
+        </div>
+        <div class="post-body">
+          <div class="post-text">Nobody told me building a website was the easy part.
+
+The hard part? Getting people to actually find it.
+
+I spent weeks perfecting a client's WordPress site — clean design, fast loading, mobile-friendly.
+
+Then it sat at page 6 on Google for 3 months.
+
+Here's what changed everything:
+
+→ Targeted 3 long-tail keywords instead of 1 broad one
+→ Rewrote every meta description to actually be interesting
+→ Built 10 internal links across existing pages
+→ Fixed 4 technical errors Google Search Console was flagging
+
+Within 6 weeks — page 1 for 2 of the 3 keywords.
+
+SEO isn't magic. It's just knowing where to look.
+
+What's the biggest SEO challenge you're dealing with right now?
+
+<span class="hashtag">#SEO #WordPress #DigitalMarketing #ContentStrategy</span></div>
+        </div>
+        <div class="post-footer"><span>👍 247 reactions</span><span>💬 38 comments</span><span>🔁 52 reposts</span></div>
+      </div>
+
+      <div class="post-card">
+        <div class="post-card-header">
+          <div class="post-avatar">A</div>
+          <div><div class="post-name">Amna Anwar</div><div class="post-handle">Digital Marketing Specialist</div></div>
+        </div>
+        <div class="post-body">
+          <div class="post-text">A business owner asked me last week:
+
+"Do I really need a Moodle LMS? Can't I just post videos on YouTube?"
+
+Here's the honest answer:
+
+YouTube is free. Moodle costs time and setup.
+
+But YouTube gives you zero control over:
+✗ Who watches your content
+✗ How students progress
+✗ Whether they actually learn
+✗ Your revenue (ads can kill your income overnight)
+
+Moodle gives you:
+✓ A private, branded learning space
+✓ Student enrollment & progress tracking
+✓ Quizzes, assignments, certificates
+✓ Complete ownership of your content
+
+If you're serious about eLearning — you need the right platform.
+
+YouTube is for discovery. Moodle is for transformation.
+
+<span class="hashtag">#MoodleLMS #eLearning #OnlineCourses #EdTech</span></div>
+        </div>
+        <div class="post-footer"><span>👍 183 reactions</span><span>💬 29 comments</span><span>🔁 44 reposts</span></div>
+      </div>
+
+    </div>
+    <div class="copy-note">Note: These posts are written to drive engagement through storytelling, specific numbers, and a clear CTA — proven LinkedIn copywriting techniques.</div>
+  </div>
+
+  <!-- INSTAGRAM -->
+  <div class="platform-section">
+    <div class="platform-label">
+      <span class="platform-icon">📸</span>
+      <span class="platform-name">Instagram</span>
+      <span class="platform-desc">Visual · Short-form · Brand Awareness</span>
+    </div>
+
+    <div class="insta-card">
+      <div class="insta-header">
+        <div class="insta-avatar">A</div>
+        <div class="insta-username">amna.anwar.digital</div>
+      </div>
+      <div class="insta-image">
+        <div class="insta-image-text">"Your website is your best<br>salesperson.<br>Is it doing its job?"</div>
+      </div>
+      <div class="insta-caption">
+        <span class="username">amna.anwar.digital</span> Most business websites are beautiful brochures that nobody reads. 📋<br><br>
+        The difference between a website that converts and one that doesn't? Usually 3 things:<br><br>
+        1️⃣ A clear headline that says EXACTLY who you help<br>
+        2️⃣ One strong call-to-action (not five)<br>
+        3️⃣ Social proof — testimonials, numbers, results<br><br>
+        Your website should be working for you 24/7. If it's not — it's time to fix it.<br><br>
+        Drop a 🙋 if you want a free website audit tip in the comments!
+      </div>
+      <div class="insta-hashtags">#WebDesign #WordPress #DigitalMarketing #SmallBusiness #ContentMarketing #SEOtips #WebDevelopment #OnlineBusiness</div>
+    </div>
+    <div class="copy-note" style="margin-top:16px;">Note: Instagram copy uses pattern interrupts, numbered lists, and engagement prompts to maximize reach and saves.</div>
+  </div>
+
+  <!-- TWITTER/X -->
+  <div class="platform-section">
+    <div class="platform-label">
+      <span class="platform-icon">🐦</span>
+      <span class="platform-name">Twitter / X</span>
+      <span class="platform-desc">Concise · Punchy · High Engagement</span>
+    </div>
+    <div class="posts-grid">
+
+      <div class="post-card">
+        <div class="post-card-header">
+          <div class="post-avatar">A</div>
+          <div><div class="post-name">Amna Anwar</div><div class="post-handle">@amna_digital</div></div>
+        </div>
+        <div class="post-body">
+          <div class="post-text">Unpopular opinion:
+
+Most businesses don't need more content.
+
+They need better content that's actually optimized for search.
+
+10 mediocre blogs = 0 traffic
+1 well-researched, SEO-optimized blog = consistent traffic for years
+
+Quality > quantity. Always.
+
+<span class="hashtag">#SEO #ContentMarketing #DigitalMarketing</span></div>
+        </div>
+        <div class="post-footer"><span>❤️ 842</span><span>🔁 319</span><span>💬 67</span></div>
+      </div>
+
+      <div class="post-card">
+        <div class="post-card-header">
+          <div class="post-avatar">A</div>
+          <div><div class="post-name">Amna Anwar</div><div class="post-handle">@amna_digital</div></div>
+        </div>
+        <div class="post-body">
+          <div class="post-text">Free SEO checklist for every blog post:
+
+☐ Target keyword in title
+☐ Keyword in first 100 words
+☐ Meta description written (150 chars)
+☐ At least 2 internal links
+☐ Image alt text filled in
+☐ URL is short and clean
+☐ Header tags (H1, H2, H3) used properly
+
+Save this. Use it every time.
+
+<span class="hashtag">#SEO #Blogging #ContentStrategy</span></div>
+        </div>
+        <div class="post-footer"><span>❤️ 1.2K</span><span>🔁 687</span><span>💬 94</span></div>
+      </div>
+
+    </div>
+    <div class="copy-note">Note: Twitter/X copy is built for maximum shareability — practical value, easy to save, strong hook in first line.</div>
+  </div>
+
+  <div class="author-box">
+    <div class="author-avatar">A</div>
+    <div>
+      <div class="author-name">Amna Anwar</div>
+      <div class="author-bio">Digital Marketing Specialist · WordPress & Moodle LMS Developer · SEO Strategist based in Multan, Pakistan.</div>
+    </div>
+  </div>
+
+</div>
+
+<footer>Writing Sample 02 · Social Media Copywriting · amnaanwar.github.io</footer>
+</body>
+</html>
